@@ -74,6 +74,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 - **David Pham**
+- **David J Campbell**
+- **Rob Wawrzak**
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
