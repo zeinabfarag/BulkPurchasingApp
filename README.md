@@ -85,4 +85,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+-
+
+See excel sheet for a Swanky Map of how the login webpage connect
