@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+}
+
+#title {
+  /* text-align: center; */
+  font-weight: bold;
+}
+
+#offeringimg {
+  width: 300px;
+  height: 300px;
+}
