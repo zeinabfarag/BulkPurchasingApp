@@ -1,3 +1,4 @@
+// Sign Up
 $('#signUpSubmit').click(function(event) {
     event.preventDefault();
     var email = $('#signUpEmail').val();
@@ -7,9 +8,23 @@ $('#signUpSubmit').click(function(event) {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorMessage);
-      });      
+      }).then(
+          //TODO: Create a user object in Firebase Database. It should contain the following fields:
+            /*
+                UID
+                address
+                city
+                country
+                createDate
+                firstName
+                lastName
+                postalCode
+                province
+            */
+      );      
 });
 
+// Sign In
 $('#signInSubmit').click(function(event) {
     event.preventDefault();
     var email = $('#signInEmail').val();
@@ -22,6 +37,8 @@ $('#signInSubmit').click(function(event) {
     });
 });
 
+// !!!!!!!!!!IMPORTANT - All pages will need to reference this code to determine if the user is logged in or not!!!!!!!!!!!!
+// Listener on the Firebase user object.
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -40,8 +57,12 @@ firebase.auth().onAuthStateChanged(function(user) {
                     "\nIs Anonymous: " + user.isAnonymous, 
                     "\nUID: " + user.uid, 
                     "\nProvider Data: " + user.providerData);
-    } else {
-      // User is signed out.
-      // ...
     }
+
+    var db = firebase.database();
+
+    // For this line to work, there MUST be a matching users entry in the Firebase database. I've created 1 user as an example. Sign-In using abc@abc.com with password 123456.
+    db.ref('users').orderByChild('UID').equalTo(user.uid).once('value').then(function(snapshot) {
+        console.log(snapshot.val())
+    });
   });
