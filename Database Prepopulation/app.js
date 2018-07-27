@@ -1,18 +1,26 @@
-var user = {
-  userID: 1,
+var users = {
   firstName: 'John',
   lastName: 'Doe',
-  address1: '8820 Mississauga Road',
-  address2: '',
-  postalCode: 'L2N 3E3',
+  address: '8820 Mississauga Road',
+  postalCode: 'L2N3E3',
   city: 'Mississauga',
   province: 'Ontario',
   country: 'Canada',
-  joinDate: '03/20/2018'
+  createDate: '03/20/2018'
 };
 
-var offering = {
-  offeringID: 0,
+/* var user = {
+  firstName: 'David',
+  lastName: 'Pham',
+  address: '23 Stone Mason Crescent, Suite #22',
+  postalCode: 'M9J8J3',
+  city: 'Toronto',
+  province: 'Ontario',
+  country: 'Canada',
+  createDate: '05/20/2018'
+}; */
+
+var offers = {
   title: 'Floating Rubber Duck',
   description: '10x9x9-cm. Each one is packaged in its own bag.',
   url:
@@ -21,14 +29,14 @@ var offering = {
     'https://sc01.alicdn.com/kf/HTB1Hdr9ksjI8KJjSsppq6xbyVXap/Customized-safety-bath-ducky-promotional-floating-rubber.jpg',
   qty: 5000,
   pricePerUnit: 1.5,
-  poster: user.userID
+  poster: ''
 };
 
-var commitment = {
+var commits = {
   offeringID: 0,
   userID: 1,
   commitQty: 950,
-  commitDate: '07/29/2018'
+  createDate: '07/29/2018'
 };
 
 $(document).ready(function() {
@@ -45,7 +53,11 @@ $(document).ready(function() {
 
   var db = firebase.database();
 
-  /* db.ref('user').push(user);
-    db.ref('offering').push(offering); */
-  db.ref('commitment').push(commitment);
+  /* db.ref('users').push(users);
+  db.ref('offers').push(offers);
+  db.ref('commits').push(commits); */
+
+  db.ref('users').once('value', function(snapshot) {
+    console.log(snapshot.val());
+  });
 });
