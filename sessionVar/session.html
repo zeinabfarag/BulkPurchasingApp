@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="container">
+        <form>
+            <div class="row">
+                <div class="col-12">
+                    <h4>UID:</h4>
+                    <input id='uidInput' type="text" class="form-control">
+                </div>
+                <div class="col-12">
+                    <h4>Commit ID:</h4>
+                    <input id='commitInput' type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col-12">
+                    <h4>Offer ID:</h4>
+                    <input id='offerInput' type="text" class="form-control" placeholder="">
+                </div>
+                <button id='saveBtn' type="submit" class="btn btn-primary col-4 m-2">Save Session Variable</button>
+                <button id='getBtn' type="submit" class="btn btn-primary col-4 m-2">Current Session Varilable Values</button>
+                <a id='newURL' href="session.html" class='col-12'>Go To: session.html</a>
+
+                <div class="col-12">
+                    <h4>New Page URL:</h4>
+                    <input id='newPage' type="text" class="form-control" placeholder="">
+                </div>
+                <button id='goToNewPage' type="submit" class="btn btn-primary col-4 m-2">Update Link</button>
+            </div>
+        </form>
+
+        <script type="text/javascript">
+            // Saves session variables
+            $('#saveBtn').click(function (event) {
+                event.preventDefault();
+                sessionStorage.setItem("userId", $('#uidInput').val());
+                sessionStorage.setItem("commitId", $('#commitInput').val());
+                sessionStorage.setItem("offerId", $('#offerInput').val());
+
+                console.log('userID=' + sessionStorage.getItem("userId"),
+                    "commitID=" + sessionStorage.getItem("commitId"),
+                    'offerID=' + sessionStorage.getItem("offerId"))
+            })
+
+            // Shows session variable
+            $('#getBtn').click(function (event) {
+                event.preventDefault();
+
+                console.log('userID=' + sessionStorage.getItem("userId"),
+                    "commitID=" + sessionStorage.getItem("commitId"),
+                    'offerID=' + sessionStorage.getItem("offerId"))
+            })
+
+            // Updates link
+            $('#goToNewPage').click(function (event) {
+                event.preventDefault();
+
+                $('#newURL').attr('href', $('#newPage').val());
+                $('#newURL').text($('#newPage').val());
+            })
+        </script>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
