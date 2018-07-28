@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA",
+            authDomain: "gpa-d-7c696.firebaseapp.com",
+            databaseURL: "https://gpa-d-7c696.firebaseio.com",
+            projectId: "gpa-d-7c696",
+            storageBucket: "gpa-d-7c696.appspot.com",
+            messagingSenderId: "718824836495"
+        };
+        firebase.initializeApp(config);
+
+
+    </script>
+</head>
+
+<body>
+    <script>
+        var db = firebase.database();
+
+        var commit = {
+            commitQty: 0,
+            createDate: '03/02/2018',
+            offeringID: '',
+            userID: ''
+        }
+        firebase.database().ref('commits').push(commit);
+        /* 
+        var userArr = [
+            ['davidjcampbell@live.ca', '4JtsGgHHOeZiurFPTpOivgMqV3i2'],
+            ['campb544@gmail.com', 'M90i2yhFYOVjWl3EVeM2Aj9jzir2'],
+            ['duke6am@hotmail.com', 'Plu4oFXvlDSBeEtknme82Fn1lW12'],
+            ['abc@abc.com', 'VZXVUyyGR4RCYssxdyuBUIsQsv52'],
+            ['davec@gmail.com', 'ZDZNJEXqY7Oc7zNR4y8cPKH2tod2'],
+            ['adfds@asdfas.com', 'nytNrqRFrmRKHb2n8mXJPJ5QFxI2'],
+            ['huggins@modal.edu', 'pXaT8v8CB4NFZiujQjuFdlTARTO2'],
+            ['engine@rogers.com', 'sa4J400y09Xorqp08F8y9lGfaPA2'],
+            ['test@test.com', 'v8CRXIqigDdoT8PylkQRcMyakCe2']
+        ];
+
+        userArr.forEach(function (value, index, array) {
+            console.log(value[0]);
+            console.log(value[1]);
+
+            writeUser(value[1], value[0]);
+        });
+
+        function writeUser(UID, email) {
+            firebase.database().ref('users/' + UID).set({
+                email: email,
+                UID: UID,
+                address: "",
+                city: "",
+                country: "",
+                createDate: "",
+                firstName: "",
+                lastName: "",
+                postalCode: "",
+                province: ""
+            });
+        } 
+        */
+
+
+    </script>
+    </script>
+</body>
+
+</html>
