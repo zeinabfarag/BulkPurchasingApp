@@ -1,3 +1,5 @@
+
+// *DP* - Looks like your button is missing a ID class. This links to nowhere.
 // Create new User
 $('#signUpSubmit').click(function(event) {
   event.preventDefault();
@@ -10,7 +12,8 @@ $('#signUpSubmit').click(function(event) {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorMessage);
-    }).then;
+      // *DP* - No purpose to the .then; if you end it right away. Remove?
+    }).then; 
 
   // Capture user inputs and store them into variables
   var firstName = $('#inputFName')
@@ -38,6 +41,10 @@ $('#signUpSubmit').click(function(event) {
     .val()
     .trim();
 
+    // *DP* What is dataRef? it's the first time your using this variable.
+    // *DP* It looks like your trying to push this information to our database, but it does need to be setup before we can do this.
+    // *DP* Try adding this line before var dataref = firebase.database()
+    // *DP* Also, lets push into the correct tree dataRef.ref('users')
   dataRef.ref().push({
     firstName: firstName,
     lastName: lastName,
@@ -47,8 +54,12 @@ $('#signUpSubmit').click(function(event) {
     postalcode: postalcode,
     email: email,
     password: password
+    // *DP* We need to record the UID so we can match the auth and database objects
+    // *DP* UID: firebase.auth().currentUser.UID (Not 100% sure here, console.log it and take a look at what it returns.)
+    // *DP* We also want the country
   });
 
+  // *DP* - Don't think we need this, or at least it's not doing anything.
   dataRef.ref().on('child added', function(childSnapShot) {}),
     function(errorObject) {
       console.log('Errors handled: ' + errorObject.code);
@@ -64,9 +75,12 @@ $('#signUpSubmit').click(function(event) {
   console.log(childSnapShot.val().email);
   console.log(childSnapShot.val().password);
 
+// *DP* Be very careful here, we are all reading and writing to session storage, by including this line you might be deleting someone elses variables
+// *DP*  Instead use sessionStorage.removeItem("name_of_variable") to delete own keys relevant to you
   // Clear sessionStorage
   sessionStorage.clear();
 
+  // Anyone can use firebase to get this information, It makes it easier for the person who needs the information, but I don't think it's necessary.
   // Store all content into sessionStorage
   sessionStorage.setItem('first name', firstName);
   sessionStorage.setItem('last name', lastName);
