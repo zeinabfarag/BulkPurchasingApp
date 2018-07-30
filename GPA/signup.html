@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA",
+            authDomain: "gpa-d-7c696.firebaseapp.com",
+            databaseURL: "https://gpa-d-7c696.firebaseio.com",
+            projectId: "gpa-d-7c696",
+            storageBucket: "gpa-d-7c696.appspot.com",
+            messagingSenderId: "718824836495"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <section class='container'>
+        <h1 class='display-4'>Sign-Up</h1>
+        <form class='m-4'>
+            <div class="form-group">
+                <label for="signUpEmail">Email address</label>
+                <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="signUpPassword">Password</label>
+                <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="signUpFirstName">First Name</label>
+                <input type="input" class="form-control" id="signUpFirstName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="signUpLastName">Last Name</label>
+                <input type="input" class="form-control" id="signUpLastName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="signUpAddress">Address</label>
+                <input type="input" class="form-control" id="signUpAddress" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <label for="signUpCity">City</label>
+                <input type="input" class="form-control" id="signUpCity" placeholder="City">
+            </div>
+            <div class="form-group">
+                <label for="signUpProvince">Province</label>
+                <input type="input" class="form-control" id="signUpProvince" placeholder="Province">
+            </div>
+            <div class="form-group">
+                <label for="signUpPostalCode">Postal Code</label>
+                <input type="input" class="form-control" id="signUpPostalCode" placeholder="Postal Code">
+            </div>
+            <div class="form-group">
+                <label for="signUpCountry">Country</label>
+                <input type="input" class="form-control" id="signUpCountry" placeholder="Country">
+            </div>
+            <button type="submit" id='signUpSubmit' class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src='js/signup.js'></script>
+</body>
+
+</html>
