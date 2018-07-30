@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA",
+      authDomain: "gpa-d-7c696.firebaseapp.com",
+      databaseURL: "https://gpa-d-7c696.firebaseio.com",
+      projectId: "gpa-d-7c696",
+      storageBucket: "gpa-d-7c696.appspot.com",
+      messagingSenderId: "718824836495"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <section class='container'>
+    <h1 class='display-4'>Create a New Account to get great deals</h1>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFName">First Name</label>
+          <input type="first" class="form-control" id="inputFName" placeholder="Justin">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLName">Last Name</label>
+          <input type="last" class="form-control" id="inputLName" placeholder="Trudeau">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputAddress">Street Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1100 Crémazie East #220">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="Montreal">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputProvince">Province</label>
+            <input type="text" class="form-control" id="inputProvince" placeholder="Quebec">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPC">Postal Code</label>
+            <input type="text" class="form-control" id="inputPC" placeholder="H2P 2X2">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="xxxxxxxxx">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+  </section>
+
+  <section class='container'>
+    <h1 class='display-4'>Existing User? Please Sign-In to your account</h1>
+    <form class='m-4'>
+      <div class="form-group">
+        <label for="signInEmail">Email address</label>
+        <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="signInPassword">Password</label>
+        <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+      </div>
+      <button type="submit" id='signInSubmit' class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src='login.js'></script>
+</body>
+
+</html>
