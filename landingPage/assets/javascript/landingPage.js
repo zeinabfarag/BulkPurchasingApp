@@ -35,15 +35,15 @@ database.on('child_added', function(childSnapshot) {
 
   var innerDiv = $('<div>').addClass('card-body');
   var title = $('<h5>' + title + '</h5>').addClass('card-title');
-
+  var descript = $('<h6>' + description + '</h6>');
   var priced = $(
     '<p> Price per unit: $' + price + ' after a qty of ' + qty + '</p>'
   ).addClass('card-text');
-  var a = $('<a>Wholesaler Link</a>').addClass('btn btn-primary');
+  var a = $('<a>Wholesaler URL</a>').addClass('btn btn-primary');
   a.attr('href', url);
 
   // title, price per unit and button placed into innerDiv
-  innerDiv.append(title, priced, a);
+  innerDiv.append(title, descript, priced, a);
   card.append(thumbnail, innerDiv);
   col.append(card);
 
