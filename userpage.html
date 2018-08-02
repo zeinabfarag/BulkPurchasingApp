@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>User Profile</title>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <!-- bootsrap js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="userpage.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+
+  <!-- moment -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <p id="maintitle">Your Profile</p>
+
+    <img src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest/scale-to-width-down/480?cb=20171030104015"
+      alt="profilepic" id="profilepic">
+
+    <div class="row">
+      <div class="col-lg-6">
+        <p>
+          <span class="headers">Name:</span>
+          <span id="name"></span>
+        </p>
+
+        <p>
+          <span class="headers">Email:</span>
+          <span id="email"></span>
+        </p>
+
+      </div>
+      <div class="col-lg-6">
+
+        <p>
+          <span class="headers">Address:</span>
+          <span id="address"></span>
+        </p>
+
+        <p>
+          <span class="headers">Postal Code:</span>
+          <span id="postalcode"></span>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+
+        <div id="yourcommits">
+          <p class="headers">Your Commits:</p>
+        </div>
+
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div id="yourpostings">
+          <p class="headers">Your Postings:</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script src=" https://code.jquery.com/jquery-3.3.1.js " integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="
+          anonymous "></script>
+
+
+    <script type="text/javascript " src="userpage.js "> </script>
+</body>
+
+</html>
