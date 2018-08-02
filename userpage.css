@@ -1,7 +1,7 @@
 body {
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRO4eEfx02Em30hOnP6-DZZaZFylmybuyTORkBOBmns7fuflE);
   background-size: cover;
 }
@@ -13,7 +13,13 @@ body {
   padding: 35px;
 }
 
-#title {
+.headers {
+  font-weight: bold;
+  color: darkblue;
+  line-height: 60px;
+}
+
+#maintitle {
   font-weight: bold;
   text-align: center;
   font-size: 30px;
@@ -21,37 +27,10 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#offeringimg {
-  width: 300px;
-  height: 300px;
+#profilepic {
+  width: 200px;
+  height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid darkblue;
-}
-
-#submit {
-  background-color: darkblue;
-  color: white;
-  font-weight: bold;
-}
-
-#terms {
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-#commitment {
-  width: 100px;
-  height: 35px;
-}
-
-.box {
-  line-height: 50px;
-  margin-bottom: 20px;
-}
-
-.headers {
-  font-weight: bold;
-  color: darkblue;
 }
