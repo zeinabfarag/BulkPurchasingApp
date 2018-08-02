@@ -119,7 +119,6 @@ $("#loginout").click(function() {
     window.location.href = "signin.html";
   } else {
     firebase.auth().signOut();
-    showCommitVisibility(false);
     $("#loginout").text("Sign In");
   }
 });
