@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// session storage
+// session storages
 var userID = sessionStorage.getItem('userId');
 
 firebase.auth().onAuthStateChanged(function(user) {
