@@ -64,9 +64,9 @@ function addOffering(
   offerCommit.text("Make a commit to buy");
 
   if (firebase.auth().currentUser != null) {
-    offerCommit.addClass("visible");
+    offerCommit.show();
   } else {
-    offerCommit.addClass("invisible");
+    offerCommit.hide();
   }
 
   offerSection.append(offerPPU, offerPoster, offerFurfill);
@@ -108,13 +108,9 @@ db.ref("offers").on("child_added", function(snapshot) {
 
 function showCommitVisibility(showHide) {
   if (showHide === true) {
-    $(".commmit")
-      .addClass("visible")
-      .removeClass("invisible");
+    $(".commmit").show();
   } else {
-    $(".commmit")
-      .addClass("invisible")
-      .removeClass("visible");
+    $(".commmit").hide();
   }
 }
 
