@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Posting</title>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <!-- bootsrap js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/posting.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+
+  <!-- moment -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <p id="maintitle">Want to purchase a product at wholesale price?</p>
+    <p>Simply input the product's information from a wholesale website (ex:Alibaba) into the form below and you as well as many
+      others will have that opportunity!</p>
+
+
+    <form id="target">
+
+      <div class="row ">
+
+        <div class="col-lg-6">
+
+          <label class="headers" for="title">Item Title: </label>
+          <input type="text" id="title">
+          <br>
+
+          <label class="headers" for="description">Item Description: </label>
+          <input type="text" id="description">
+          <br>
+
+          <label class="headers" for="price">Price per Unit: </label>
+          <input type="text" id="price">
+          <br>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <label class="headers" for="quantity"> Quantity: </label>
+          <input type="number" id="quantity">
+          <br>
+
+          <label class="headers" for="image">Item Image URL:</label>
+          <input type="url" id="image">
+          <br>
+
+          <label class="headers" for="link">Original Link URL:</label>
+          <input type="url" id="link">
+          <br>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="buttonholder">
+
+        <input type="submit" id="submit">
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <!-- jQuery -->
+  <script src=" https://code.jquery.com/jquery-3.3.1.js " integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="
+      anonymous "></script>
+
+
+  <script type="text/javascript " src="js/posting.js "> </script>
+</body>
+
+</html>
