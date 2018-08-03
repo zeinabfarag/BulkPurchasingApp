@@ -8,65 +8,65 @@ function addOffering(
   oPoster,
   oFurfillment
 ) {
-  var offerLi = $("<li>");
-  offerLi.addClass("media");
+  var offerLi = $('<li>');
+  offerLi.addClass('media');
 
-  var offerImg = $("<img>");
-  offerImg.addClass("m-3");
-  offerImg.addClass("img-thumbnail");
-  offerImg.addClass("col-2");
-  offerImg.attr("src", oImg);
+  var offerImg = $('<img>');
+  offerImg.addClass('m-3');
+  offerImg.addClass('img-thumbnail');
+  offerImg.addClass('col-2');
+  offerImg.attr('src', oImg);
   //offerImg.attr("src", "img/imgHolder.png");
 
-  var offerMediaBody = $("<div>");
-  offerMediaBody.addClass("media-body");
+  var offerMediaBody = $('<div>');
+  offerMediaBody.addClass('media-body');
 
-  var offerH5 = $("<h5>");
-  offerH5.addClass("mt-0");
-  offerH5.addClass("mb-1");
+  var offerH5 = $('<h5>');
+  offerH5.addClass('mt-0');
+  offerH5.addClass('mb-1');
   offerH5.text(oTitle);
 
-  var offerDesc = $("<p>");
-  offerDesc.attr("id", "description");
+  var offerDesc = $('<p>');
+  offerDesc.attr('id', 'description');
   offerDesc.text(oDesc);
 
-  var offerSection = $("<section>");
-  offerSection.addClass("row");
-  offerSection.addClass("align-bottom");
+  var offerSection = $('<section>');
+  offerSection.addClass('row');
+  offerSection.addClass('align-bottom');
 
-  var offerPPU = $("<section>");
-  offerPPU.addClass("col-4");
-  offerPPU.attr("id", "ppu");
-  offerPPU.text("Price per Unit: $" + oPPU);
+  var offerPPU = $('<section>');
+  offerPPU.addClass('col-4');
+  offerPPU.attr('id', 'ppu');
+  offerPPU.text('Price per Unit: $' + oPPU);
 
-  var offerPoster = $("<section>");
-  offerPoster.addClass("col-4");
-  offerPoster.attr("id", "poster");
+  var offerPoster = $('<section>');
+  offerPoster.addClass('col-4');
+  offerPoster.attr('id', 'poster');
   // TODO: Get name of poster instead of key
-  offerPoster.text("Poster: " + oPoster);
+  offerPoster.text('Poster: ' + oPoster);
 
-  var offerFurfill = $("<section>");
-  offerFurfill.addClass("col-4");
-  offerFurfill.attr("id", "furfillment");
+  var offerFurfill = $('<section>');
+  offerFurfill.addClass('col-4');
+  offerFurfill.attr('id', 'furfillment');
   // TODO: Get sum of all commits and display at XXX/oFurfillment
-  offerFurfill.text("Furfillment: " + oFurfillment);
+  offerFurfill.text('Fulfillment: ' + oFurfillment);
 
-  var offerCommit = $("<button>");
-  offerCommit.addClass("btn btn-primary commit");
-  offerCommit.attr("type", "submit");
-  offerCommit.attr("offerId", oOfferId);
+  var offerCommit = $('<button>');
+  offerCommit.addClass('btn btn-primary commit');
+  offerCommit.attr('type', 'submit');
+  offerCommit.attr('offerId', oOfferId);
   offerCommit.click(function(event) {
     event.preventDefault();
-    sessionStorage.setItem("offerId", $(this).attr("offerId"));
-    window.location.href = "commit.html";
+    sessionStorage.setItem('offerId', $(this).attr('offerId'));
+    window.location.href = 'commit.html';
   });
 
-  offerCommit.text("Make a commit to buy");
+  offerCommit.text('Make a commit to buy');
 
   if (firebase.auth().currentUser != null) {
-    offerCommit.addClass("visible");
+    offerCommit.show();
   } else {
-    offerCommit.addClass("invisible");
+    offerCommit.hide();
   }
 
   offerSection.append(offerPPU, offerPoster, offerFurfill);
@@ -75,24 +75,24 @@ function addOffering(
 
   offerLi.append(offerImg, offerMediaBody);
 
-  $(".list-unstyled").append(offerLi);
+  $('.list-unstyled').append(offerLi);
 }
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA",
-  authDomain: "gpa-d-7c696.firebaseapp.com",
-  databaseURL: "https://gpa-d-7c696.firebaseio.com",
-  projectId: "gpa-d-7c696",
-  storageBucket: "gpa-d-7c696.appspot.com",
-  messagingSenderId: "718824836495"
+  apiKey: 'AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA',
+  authDomain: 'gpa-d-7c696.firebaseapp.com',
+  databaseURL: 'https://gpa-d-7c696.firebaseio.com',
+  projectId: 'gpa-d-7c696',
+  storageBucket: 'gpa-d-7c696.appspot.com',
+  messagingSenderId: '718824836495'
 };
 firebase.initializeApp(config);
 
 var db = new firebase.database();
 
 // Populates media objects for each offer in the database
-db.ref("offers").on("child_added", function(snapshot) {
+db.ref('offers').on('child_added', function(snapshot) {
   offerSnapshot = snapshot.val();
 
   addOffering(
@@ -108,28 +108,24 @@ db.ref("offers").on("child_added", function(snapshot) {
 
 function showCommitVisibility(showHide) {
   if (showHide === true) {
-    $(".commmit")
-      .addClass("visible")
-      .removeClass("invisible");
+    $('.commmit').show();
   } else {
-    $(".commmit")
-      .addClass("invisible")
-      .removeClass("visible");
+    $('.commmit').hide();
   }
 }
 
-$("#loginout").click(function() {
-  if ($("#loginout").text() === "Sign In") {
-    window.location.href = "signin.html";
+$('#loginout').click(function() {
+  if ($('#loginout').text() === 'Sign In') {
+    window.location.href = 'signin.html';
   } else {
     firebase.auth().signOut();
-    $("#loginout").text("Sign In");
+    $('#loginout').text('Sign In');
   }
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    $("#loginout").text("Sign Out");
+    $('#loginout').text('Sign Out');
     showCommitVisibility(true);
   } else {
     showCommitVisibility(false);

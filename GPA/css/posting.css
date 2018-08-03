@@ -1,0 +1,39 @@
+body {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
+  font-size: 18px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRO4eEfx02Em30hOnP6-DZZaZFylmybuyTORkBOBmns7fuflE);
+  background-size: cover;
+}
+
+.container {
+  margin-top: 100px;
+  text-align: left;
+  border: 3px darkblue dashed;
+  padding: 35px;
+}
+
+#maintitle {
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: darkblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#buttonholder {
+  text-align: center;
+}
+
+.headers {
+  font-weight: bold;
+  color: darkblue;
+  line-height: 60px;
+}
+
+#submit {
+  margin-top: 30px;
+  background-color: darkblue;
+  color: white;
+  font-weight: bold;
+}
