@@ -1,4 +1,4 @@
-# MovieApp
+# BulkPurchasingApp
 
 ## Overview
 
