@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCDl5786d2qbt1J1QsOdhYVLM7o19JRoGA",
-  authDomain: "gpa-d-7c696.firebaseapp.com",
-  databaseURL: "https://gpa-d-7c696.firebaseio.com",
-  projectId: "gpa-d-7c696",
-  storageBucket: "gpa-d-7c696.appspot.com",
-  messagingSenderId: "718824836495"
+  apiKey: "AIzaSyBLxyENt-MNT4Gswv3P2DSxf4vJmqf2qd0",
+  authDomain: "gpa-d-78c0e.firebaseapp.com",
+  databaseURL: "https://gpa-d-78c0e.firebaseio.com",
+  projectId: "gpa-d-78c0e",
+  storageBucket: "gpa-d-78c0e.appspot.com",
+  messagingSenderId: "703800029718"
 };
 firebase.initializeApp(config);
 
