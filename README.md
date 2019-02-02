@@ -1,94 +1,37 @@
-# Group Project
+# MovieApp
 
-One Paragraph of project description goes here
+## Overview
 
-## To Do:
-* Create an offering page
-* User Profile Page with list of offers/commits user has created
+A full stack single page movie application built using MySQL, Node.js, Express.js and jQuery.
 
-## Getting Started
+## Description
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This app renders movie information from "the movie database" API using jQuery. The app saves the users data using node.js and express.js to the MySQL database. The front-end of the application is done mainly using bootstrap and CSS. jQuery is used to manipulate the DOM making it a single page application. It is built using the MVC framework.
 
-### Prerequisites
+Unauthorized users are able to see an inital display of the most recent movies. They are also able to search for a particular movie using the search bar. Once they click on the movie poster, the movie's details are displayed. 
 
-What things you need to install the software and how to install them
+Only logged in authorized users are then able to save a particular movie to their favourites or schedule a time they would like to see a movie and save it to their own calendar (done using datepicker.js and fullcalendar.js). 
 
-```
-Give examples
-```
+Users are able to login using their email, github, or google account with the help of firebase. 
 
-### Installing
 
-A step by step series of examples that tell you how to get a development env running
+## Technologies used
 
-Say what the step will be
+* MySQL
+* Firebase
+* Express.js
+* Node.js
+* jQuery
+* Bootstrap
 
-```
-Give the example
-```
+## Website
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+https://zeinabfarag.github.io/BulkPurchasingApp/GPA/index.html
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-- **David Pham**
-- **David J Campbell**
-- **Rob Wawrzak** - _Contributor_
+[David Pham](https://github.com/iamdp)
+[David Campbell](https://github.com/Duke6am)
+[Rob Wawrzak](https://github.com/RobWawrzak)
+[Zeinab Farag](https://github.com/zeinabfarag)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
